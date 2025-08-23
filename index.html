@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COLPLAG</title>
+
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <!-- Iconos Material -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Webcrumbs" />
+
+  <!-- jQuery primero -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tu JS después -->
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="webcrumbs">
+    <div class="min-h-screen bg-white">
+      <header class="relative">
+        <nav id="navbar"
+          class="fixed top-0 left-0 w-full bg-white shadow-sm transition-all duration-500 ease-in-out z-50">
+          <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+              <span class="material-symbols-outlined text-primary-600 text-3xl mr-2">pest_control</span>
+              <h1 class="text-2xl font-bold text-gray-800">Colplag</h1>
+            </div>
+
+            <!-- Menú desktop -->
+            <div class="hidden md:flex space-x-8">
+              <a href="#servicios" class="text-gray-600 hover:text-primary-600 transition-colors">Servicios</a>
+              <a href="#beneficios" class="text-gray-600 hover:text-primary-600 transition-colors">Beneficios</a>
+              <a href="#proceso" class="text-gray-600 hover:text-primary-600 transition-colors">Proceso</a>
+              <a href="#contacto" class="text-gray-600 hover:text-primary-600 transition-colors">Contacto</a>
+            </div>
+
+            <!-- Menú móvil -->
+            <div class="md:hidden">
+              <details class="relative">
+                <summary class="list-none cursor-pointer">
+                  <span class="material-symbols-outlined text-2xl text-gray-800">menu</span>
+                </summary>
+                <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-10">
+                  <a href="#servicios"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Servicios</a>
+                  <a href="#beneficios"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Beneficios</a>
+                  <a href="#proceso"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Proceso</a>
+                  <a href="#contacto"
+                    class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Contacto</a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </nav>
+
+        <div class="relative w-full h-[600px] overflow-hidden">
+          <div class="relative h-full">
+            <div class="absolute inset-0 flex transition-transform duration-1000 ease-in-out">
+              <!-- Slide 1 -->
+              <div class="min-w-full h-full relative flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1614771637369-ed94441a651a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80"
+                  alt="Técnico de control de plagas profesional" class="w-full h-full object-cover"
+                  keywords="pest control, fumigation, professional exterminator" />
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div class="absolute inset-0 flex items-center justify-center px-8">
+                  <div class="text-center max-w-4xl">
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 transform transition-all duration-700 hover:scale-105">
+                      Control de plagas profesional y efectivo
+                    </h2>
+                    <p class="text-xl md:text-2xl text-white mb-10 font-light">
+                      Soluciones especializadas para proteger su hogar y negocio contra todo tipo de plagas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="min-w-full h-full relative flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1743422855144-78c41a887c30?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxmdW1pZ2F0aW9uJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1NTk2MjQ0MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2000"
+                  alt="Equipamiento de fumigación profesional" class="w-full h-full object-cover"
+                  keywords="fumigation equipment, pest control technology" />
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div class="absolute inset-0 flex items-center justify-center px-8">
+                  <div class="text-center max-w-4xl">
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 transform transition-all duration-700 hover:scale-105">
+                      Tecnología avanzada para el control de plagas
+                    </h2>
+                    <p class="text-xl md:text-2xl text-white mb-10 font-light">
+                      Utilizamos equipos de última generación para garantizar resultados efectivos y duraderos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="min-w-full h-full relative flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1700977932725-bf8a069b82db?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxwZXN0JTIwcHJldmVudGlvbnxlbnwwfHx8fDE3NTU5NjI0NDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2000"
+                  alt="Prevención de plagas en hogares" class="w-full h-full object-cover"
+                  keywords="pest prevention, home protection" />
+                <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+                <div class="absolute inset-0 flex items-center justify-center px-8 z-20">
+                  <div class="text-center max-w-4xl">
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 transform transition-all duration-700 hover:scale-105">
+                      Prevención y protección continua
+                    </h2>
+                    <p class="text-xl md:text-2xl text-white mb-10 font-light">
+                      Desarrollamos planes personalizados para mantener su espacio libre de plagas todo el año.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10"> <button
+                class="w-12 h-12 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 backdrop-blur-sm flex items-center justify-center transition-all hover:scale-110 chevron_left">
+                <span class="material-symbols-outlined text-white">chevron_left</span> </button> </div>
+            <div class="absolute top-1/2 right-4 transform -translate-y-1/2 z-10"> <button
+                class="w-12 h-12 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 backdrop-blur-sm flex items-center justify-center transition-all hover:scale-110 chevron_right">
+                <span class="material-symbols-outlined text-white">chevron_right</span> </button> </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 flex justify-center z-10 mb-4">
+            <div class="flex space-x-4"> <a href="#contacto"
+                class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl text-lg">
+                Solicitar servicio </a> <a href="#servicios"
+                class="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-filter backdrop-blur-sm text-white border border-white border-opacity-40 font-medium py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl text-lg">
+                Ver servicios </a> </div>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-100 to-transparent"></div>
+      </header>
+      <section id="quienes-somos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Quiénes Somos</h2>
+            <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Somos una empresa líder en el control de plagas con más
+              de 15 años de experiencia brindando soluciones efectivas y sostenibles.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">history</span> </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Nuestra Historia</h3>
+              <p class="text-gray-600 text-center">Fundada en 2008, hemos crecido hasta convertirnos en referentes del
+                sector, manteniendo siempre nuestro compromiso con la excelencia y la sostenibilidad.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">group</span> </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Nuestro Equipo</h3>
+              <p class="text-gray-600 text-center">Contamos con técnicos certificados y especialistas en diferentes
+                tipos de plagas, todos comprometidos con ofrecer el mejor servicio a nuestros clientes.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">verified</span> </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Certificaciones</h3>
+              <p class="text-gray-600 text-center">Disponemos de todas las certificaciones y licencias requeridas en el
+                sector, garantizando servicios seguros y de calidad.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestra Misión</h2>
+              <div class="w-20 h-1 bg-primary-500 mb-6"></div>
+              <p class="text-lg text-gray-600 mb-8">Proporcionar soluciones efectivas y respetuosas con el medio
+                ambiente para el control de plagas, garantizando la tranquilidad y bienestar de nuestros clientes
+                mediante un servicio profesional y personalizado.</p>
+              <div class="space-y-4">
+                <div class="flex items-start"> <span
+                    class="material-symbols-outlined text-primary-600 mr-3 mt-1">check_circle</span>
+                  <p class="text-gray-700">Compromiso con la satisfacción del cliente</p>
+                </div>
+                <div class="flex items-start"> <span
+                    class="material-symbols-outlined text-primary-600 mr-3 mt-1">check_circle</span>
+                  <p class="text-gray-700">Uso de métodos y productos respetuosos con el entorno</p>
+                </div>
+                <div class="flex items-start"> <span
+                    class="material-symbols-outlined text-primary-600 mr-3 mt-1">check_circle</span>
+                  <p class="text-gray-700">Formación continua de nuestro equipo técnico</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestra Visión</h2>
+              <div class="w-20 h-1 bg-primary-500 mb-6"></div>
+              <p class="text-lg text-gray-600 mb-8">Ser reconocidos como la empresa líder en el sector del control de
+                plagas, destacando por nuestra innovación, calidad y compromiso con la salud pública y el medio
+                ambiente.</p>
+              <div class="space-y-4">
+                <div class="flex items-start"> <span
+                    class="material-symbols-outlined text-primary-600 mr-3 mt-1">trending_up</span>
+                  <p class="text-gray-700">Expandir nuestra presencia a nivel nacional</p>
+                </div>
+                <div class="flex items-start"> <span
+                    class="material-symbols-outlined text-primary-600 mr-3 mt-1">trending_up</span>
+                  <p class="text-gray-700">Implementar tecnologías innovadoras en nuestros servicios</p>
+                </div>
+                <div class="flex items-start"> <span
+                    class="material-symbols-outlined text-primary-600 mr-3 mt-1">trending_up</span>
+                  <p class="text-gray-700">Desarrollar programas de educación sobre prevención de plagas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="servicios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+            <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Ofrecemos soluciones integrales para el control de todo
+              tipo de plagas, adaptadas a las necesidades específicas de cada cliente.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div class="h-48 overflow-hidden"> <img
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                  alt="Control de insectos" class="w-full h-full object-cover"
+                  keywords="insect control, bugs extermination" /> </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Control de Insectos</h3>
+                <p class="text-gray-600 mb-4">Eliminación efectiva de cucarachas, hormigas, moscas, mosquitos y todo
+                  tipo de insectos que puedan afectar su hogar o negocio.</p> <a href="#contacto"
+                  class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"> Más información
+                  <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span> </a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div class="h-48 overflow-hidden"> <img
+                  src="https://images.unsplash.com/photo-1595693678380-e1863ab414a2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxyb2RlbnQlMjBjb250cm9sfGVufDB8fHx8MTc1NTk2MjY5M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                  alt="Control de roedores" class="w-full h-full object-cover"
+                  keywords="rodent control, mice extermination" /> </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Control de Roedores</h3>
+                <p class="text-gray-600 mb-4">Soluciones profesionales para la eliminación y prevención de ratas,
+                  ratones y otros roedores que puedan representar un riesgo.</p> <a href="#contacto"
+                  class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"> Más información
+                  <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span> </a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div class="h-48 overflow-hidden"> <img
+                  src="https://images.unsplash.com/photo-1636791013127-37effd526316?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxkaXNpbmZlY3Rpb258ZW58MHx8fHwxNzU1OTYyNjk0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                  alt="Desinfección" class="w-full h-full object-cover"
+                  keywords="disinfection, sanitization services" /> </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Desinfección</h3>
+                <p class="text-gray-600 mb-4">Servicios de desinfección y sanitización para eliminar virus, bacterias y
+                  otros microorganismos patógenos de sus espacios.</p> <a href="#contacto"
+                  class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"> Más información
+                  <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="beneficios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Beneficios de Nuestros Servicios</h2>
+            <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Al elegir Colplag, usted obtiene múltiples ventajas que
+              garantizan su tranquilidad y la protección de su espacio.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-all text-center">
+              <div class="w-16 h-16 mx-auto bg-primary-100 rounded-full flex items-center justify-center mb-4"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">health_and_safety</span> </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Seguridad Garantizada</h3>
+              <p class="text-gray-600">Todos nuestros tratamientos son seguros para personas y mascotas.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-all text-center">
+              <div class="w-16 h-16 mx-auto bg-primary-100 rounded-full flex items-center justify-center mb-4"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">schedule</span> </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Respuesta Rápida</h3>
+              <p class="text-gray-600">Atendemos emergencias en menos de 24 horas para solucionar su problema lo antes
+                posible.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-all text-center">
+              <div class="w-16 h-16 mx-auto bg-primary-100 rounded-full flex items-center justify-center mb-4"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">landscape</span> </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Eco-friendly</h3>
+              <p class="text-gray-600">Utilizamos productos respetuosos con el medio ambiente y aplicados de forma
+                responsable.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-all text-center">
+              <div class="w-16 h-16 mx-auto bg-primary-100 rounded-full flex items-center justify-center mb-4"> <span
+                  class="material-symbols-outlined text-primary-600 text-3xl">support_agent</span> </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Soporte Continuo</h3>
+              <p class="text-gray-600">Seguimiento post-servicio y asesoramiento permanente para prevenir futuras
+                infestaciones.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="proceso" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestro Proceso</h2>
+            <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Seguimos un proceso estructurado y eficiente para
+              garantizar los mejores resultados en cada servicio.</p>
+          </div>
+          <div class="relative">
+            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary-100 transform -translate-x-1/2">
+            </div>
+            <div class="space-y-12 relative">
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">1. Inspección</h3>
+                  <p class="text-gray-600">Realizamos una evaluación completa del área afectada para identificar el tipo
+                    de plaga, el nivel de infestación y los factores que favorecen su presencia.</p>
+                </div>
+                <div
+                  class="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-lg my-4 md:my-0 relative z-10">
+                  1</div>
+                <div class="md:w-1/2 md:pl-12 md:text-left"></div>
+              </div>
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right"></div>
+                <div
+                  class="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-lg my-4 md:my-0 relative z-10">
+                  2</div>
+                <div class="md:w-1/2 md:pl-12 md:text-left">
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">2. Diagnóstico</h3>
+                  <p class="text-gray-600">Analizamos la información recopilada durante la inspección para desarrollar
+                    un plan de acción personalizado y efectivo.</p>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">3. Tratamiento</h3>
+                  <p class="text-gray-600">Aplicamos los tratamientos más adecuados utilizando técnicas y productos
+                    específicos para cada tipo de plaga, garantizando su eliminación efectiva.</p>
+                </div>
+                <div
+                  class="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-lg my-4 md:my-0 relative z-10">
+                  3</div>
+                <div class="md:w-1/2 md:pl-12 md:text-left"></div>
+              </div>
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right"></div>
+                <div
+                  class="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-lg my-4 md:my-0 relative z-10">
+                  4</div>
+                <div class="md:w-1/2 md:pl-12 md:text-left">
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">4. Seguimiento</h3>
+                  <p class="text-gray-600">Realizamos visitas de seguimiento para verificar la efectividad del
+                    tratamiento y aplicar ajustes si fuera necesario.</p>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">5. Prevención</h3>
+                  <p class="text-gray-600">Implementamos medidas preventivas y ofrecemos recomendaciones para evitar
+                    futuras infestaciones y mantener su espacio protegido.</p>
+                </div>
+                <div
+                  class="mx-auto md:mx-0 w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-lg my-4 md:my-0 relative z-10">
+                  5</div>
+                <div class="md:w-1/2 md:pl-12 md:text-left"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ubicacion" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dónde Encontrarnos</h2>
+            <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Visítanos en nuestras oficinas o contáctanos para agendar una cita.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <!-- Información -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Nuestra Dirección</h3>
+              <p class="text-gray-600 mb-4">📍 Calle Ejemplo #123, Ciudad, País</p>
+              <p class="text-gray-600 mb-2">📞 Tel: +57 300 123 4567</p>
+              <p class="text-gray-600">✉️ contacto@colplag.com</p>
+            </div>
+
+            <!-- Mapa -->
+            <div class="w-full h-80 rounded-xl overflow-hidden shadow-md">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.836456146781!2d-74.08175!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnMzQuOSJOIDc0wrAwNCc1NC4zIlc!5e0!3m2!1ses-419!2sco!4v1615560000000!5m2!1ses-419!2sco"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <button id="backToTop"
+      class="hidden fixed bottom-6 right-6 bg-primary-600 text-white p-3 rounded-full shadow-lg transition-all duration-500 hover:scale-110">
+      <span class="material-symbols-outlined text-2xl">arrow_upward</span>
+    </button>
+
+  </div>
+
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Logo y descripción -->
+      <div>
+        <div class="flex items-center mb-4">
+          <span class="material-symbols-outlined text-primary-500 text-3xl mr-2">pest_control</span>
+          <h2 class="text-xl font-bold text-white">Colplag</h2>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Control profesional de plagas con más de 15 años de experiencia.
+          Protegemos tu hogar y negocio con soluciones efectivas y seguras.
+        </p>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Enlaces</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#servicios" class="hover:text-primary-400 transition-colors">Servicios</a></li>
+          <li><a href="#beneficios" class="hover:text-primary-400 transition-colors">Beneficios</a></li>
+          <li><a href="#proceso" class="hover:text-primary-400 transition-colors">Proceso</a></li>
+          <li><a href="#contacto" class="hover:text-primary-400 transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes sociales -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Síguenos</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-primary-400 transition-colors" aria-label="Facebook">
+            <i data-lucide="facebook" class="w-6 h-6"></i>
+          </a>
+          <a href="#" class="hover:text-primary-400 transition-colors" aria-label="Instagram">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </a>
+          <a href="#" class="hover:text-primary-400 transition-colors" aria-label="Mail">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Línea final -->
+    <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+      © 2025 Colplag. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+
+</html>
