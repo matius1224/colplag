@@ -41,42 +41,26 @@ $(function () {
         }
     });
 
-    // carrusel imagenes
-    const $carousel = $(".relative.h-full > .absolute.inset-0.flex");
-    const $slides = $carousel.children(".min-w-full.h-full.relative.flex-shrink-0");
-    const totalSlides = $slides.length;
     let currentIndex = 0;
+    const totalSlides = $(".slide").length;
 
-    // Mover al slide indicado
-    function goToSlide(index) {
-        if (index < 0) {
-            index = totalSlides - 1; // vuelve al último
-        }
-        if (index >= totalSlides) {
-            index = 0; // vuelve al primero
-        }
-        currentIndex = index;
-
-        // desplazamos el carrusel
-        const offset = -currentIndex * 100; // porcentaje
-        $carousel.css("transform", `translateX(${offset}%)`);
+    function showSlide(index) {
+        const offset = -index * 100 + "%";
+        $(".slides").css("transform", "translateX(" + offset + ")");
     }
 
-    // Botón izquierda
-    $(".chevron_left").click(function () {
-        goToSlide(currentIndex - 1);
+    $(".next").click(function () {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+        
     });
 
-    // Botón derecha
-    $(".chevron_right").click(function () {
-        goToSlide(currentIndex + 1);
+    $(".prev").click(function () {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
     });
 
-    // Auto avance cada 5 segundos
-    setInterval(() => {
-        goToSlide(currentIndex + 1);
-    }, 5000);
-
-    // Inicia en la primera slide
-    goToSlide(0);
+    setInterval(function () {
+        $(".next").click();
+    }, 15000);
 });

@@ -752,13 +752,11 @@ video {
 }
 
 #webcrumbs .bg-primary-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(115 65 255 / var(--tw-bg-opacity, 1));
+    background-color: rgb(0, 175, 240);
 }
 
 #webcrumbs .bg-primary-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(99 27 255 / var(--tw-bg-opacity, 1));
+    background-color: rgb(0, 175, 240);
 }
 
 #webcrumbs .bg-white {
@@ -908,8 +906,7 @@ video {
 }
 
 #webcrumbs .text-primary-600 {
-    --tw-text-opacity: 1;
-    color: rgb(99 27 255 / var(--tw-text-opacity, 1));
+    color: rgb(0, 175, 240);
 }
 
 #webcrumbs .text-white {
@@ -1033,8 +1030,7 @@ video {
 }
 
 #webcrumbs .hover\:bg-primary-700:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(97 27 248 / var(--tw-bg-opacity, 1));
+    background-color: rgb(0, 175, 240);
 }
 
 #webcrumbs .hover\:bg-opacity-100:hover {
@@ -1050,13 +1046,11 @@ video {
 }
 
 #webcrumbs .hover\:text-primary-600:hover {
-    --tw-text-opacity: 1;
-    color: rgb(99 27 255 / var(--tw-text-opacity, 1));
+    color: rgb(0, 175, 240) !important;
 }
 
 #webcrumbs .hover\:text-primary-700:hover {
-    --tw-text-opacity: 1;
-    color: rgb(97 27 248 / var(--tw-text-opacity, 1));
+    color: rgb(0, 175, 240);
 }
 
 #webcrumbs .hover\:shadow-lg:hover {
@@ -1179,22 +1173,22 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 15px;
-  }
+}
 
-  /* Para que el contenido no quede escondido debajo del nav */
-  body {
+/* Para que el contenido no quede escondido debajo del nav */
+body {
     margin: 0;
-    padding-top: 70px; /* mismo alto del nav */
+    padding-top: 70px;
     font-family: Arial, sans-serif;
-  }
+}
 
-  /* Botón flotante */
-  #backToTop {
+/* Botón flotante */
+#backToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
-    background: #007bff;
+    background: #00aff0 !important;
     color: white;
     border: none;
     padding: 12px 16px;
@@ -1204,8 +1198,122 @@ nav {
     z-index: 1001;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s;
-  }
+}
 
-  #backToTop:hover {
-    background: #0056b3;
-  }
+#backToTop:hover {
+    background: #00b0f08f !important;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 800px;
+    color: #fff;
+    padding: 20px;
+}
+
+.caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.caption p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    right: 20px;
+    background-color: #fff;
+    border: 4px solid #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
