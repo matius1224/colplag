@@ -52,7 +52,7 @@ $(function () {
     $(".next").click(function () {
         currentIndex = (currentIndex + 1) % totalSlides;
         showSlide(currentIndex);
-        
+
     });
 
     $(".prev").click(function () {
@@ -63,4 +63,44 @@ $(function () {
     setInterval(function () {
         $(".next").click();
     }, 15000);
+
+    var $slider = $('#equipo-slider .flex');
+    var $dots = $('#equipo-dots button');
+    var slides = $slider.children().length;
+    var current = 0;
+    var interval = null;
+
+    function updateSlider() {
+        $slider.css('transform', 'translateX(-' + (current * 100) + '%)');
+        $dots.each(function(idx) {
+            $(this).toggleClass('bg-primary-600', idx === current);
+            $(this).toggleClass('bg-primary-300', idx !== current);
+        });
+    }
+
+    function goToSlide(idx) {
+        current = idx;
+        updateSlider();
+        resetInterval();
+    }
+
+    $dots.each(function(idx) {
+        $(this).on('click', function() {
+            goToSlide(idx);
+        });
+    });
+
+    function nextSlide() {
+        current = (current + 1) % slides;
+        updateSlider();
+    }
+
+    function resetInterval() {
+        if (interval) clearInterval(interval);
+        interval = setInterval(nextSlide, 10000);
+    }
+
+    // Init
+    updateSlider();
+    resetInterval();
 });
