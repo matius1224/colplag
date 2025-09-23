@@ -1318,3 +1318,77 @@ body {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
+
+/* Animación para la imagen de fondo: sale del fondo y se muestra completa */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-zoom-in {
+    animation: zoomIn 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animación para el título: cae desde arriba */
+@keyframes titleDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px) scaleY(1.2);
+        filter: blur(6px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(10px) scaleY(0.98);
+        filter: blur(0);
+    }
+
+    80% {
+        transform: translateY(-4px) scaleY(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+        filter: blur(0);
+    }
+}
+
+.animate-title-drop {
+    animation: titleDrop 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Animación para el subtítulo: sube desde abajo */
+@keyframes subtitleRise {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scaleY(0.95);
+        filter: blur(6px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-8px) scaleY(1.02);
+        filter: blur(0);
+    }
+
+    80% {
+        transform: translateY(2px) scaleY(0.99);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+        filter: blur(0);
+    }
+}
+
+.animate-subtitle-rise {
+    animation: subtitleRise 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

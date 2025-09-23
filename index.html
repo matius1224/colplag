@@ -68,27 +68,37 @@
           </div>
         </nav>
 
-        <div class="relative w-full h-[650px] overflow-hidden">
+        <div class="relative w-full h-[630px] overflow-hidden">
           <div class="carousel relative w-full h-full">
-            <!-- Video de fondo -->
-            <video class="absolute inset-0 w-full h-full object-cover z-0" autoplay loop muted playsinline>
-              <source src="./img/desinfeccion.mp4" type="video/mp4">
-              Tu navegador no soporta el video de fondo.
-            </video>
-
-            <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-transparent z-10"></div>
-
-            <div class="slides relative z-20">
+            <div class="slides relative z-20 h-full">
               <!-- Slide 1 -->
-              <div class="slide flex items-center justify-center h-full">
-                <div class="caption w-full max-w-2xl mx-auto px-4 py-10 text-center transition-all duration-300">
+              <div class="slide relative flex items-center justify-center h-full w-full transition-all duration-700">
+                <div class="absolute inset-0 w-full h-full flex flex-col sm:block overflow-hidden">
+                  <picture>
+                    <!-- Imagen vertical para móvil -->
+                    <source srcset="./img/principal1-vert.png" media="(max-width: 640px)">
+                    <!-- Imagen horizontal para tablet y desktop -->
+                    <img 
+                      src="./img/principal1.png" 
+                      alt="Protección eficaz contra plagas"
+                      class="block w-full h-full object-cover object-center slide-img"
+                      style="width: 100%; height: 100%; min-width: 100%; min-height: 100%;"
+                      loading="lazy" 
+                    />
+                  </picture>
+                  <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div
+                  class="caption absolute z-30 w-full max-w-2xl mx-auto px-4 py-10 text-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-700">
                   <div class="px-6 py-8">
                     <h2
-                      class="text-primary-700 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+                      class="text-2xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold mb-4 leading-tight slide-title"
+                      style="color: #00aff0; text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                       Protección eficaz contra plagas
                     </h2>
                     <p
-                      class="text-primary-800 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed drop-shadow-md">
+                      class="text-white text-base sm:text-2xl md:text-2xl lg:text-2xl font-semibold leading-relaxed slide-subtitle"
+                      style="text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                       Nuestro equipo aplica tratamientos seguros y efectivos para mantener tu hogar o negocio libre de
                       insectos y roedores.
                     </p>
@@ -96,15 +106,33 @@
                 </div>
               </div>
               <!-- Slide 2 -->
-              <div class="slide flex items-center justify-center h-full">
-                <div class="caption w-full max-w-2xl mx-auto px-4 py-10 text-center transition-all duration-300">
+              <div class="slide relative flex items-center justify-center h-full w-full transition-all duration-300">
+                <div class="absolute inset-0 w-full h-full flex flex-col sm:block">
+                  <picture>
+                    <!-- Imagen vertical para móvil -->
+                    <source srcset="./img/principal2-vert.png" media="(max-width: 640px)">
+                    <!-- Imagen horizontal para tablet y desktop -->
+                    <img 
+                      src="./img/principal2.png" 
+                      alt="Profesionales expertos en control de plagas en salud pública"
+                      class="block w-full h-full object-cover object-center sm:w-full sm:h-full slide-img"
+                      style="width: 100%; height: 100%; min-width: 100%; min-height: 100%;"
+                      loading="lazy" 
+                    />
+                  </picture>
+                  <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div
+                  class="caption absolute z-30 w-full max-w-2xl mx-auto px-4 py-10 text-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300">
                   <div class="px-6 py-8">
                     <h2
-                      class="text-primary-700 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+                      class="text-2xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold mb-4 leading-tight sm:max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto slide-title"
+                      style="color: #00aff0; text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                       Profesionales expertos en control de plagas en salud pública
                     </h2>
                     <p
-                      class="text-primary-800 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed drop-shadow-md">
+                      class="text-white text-base sm:text-2xl md:text-2xl lg:text-2xl font-semibold leading-relaxed slide-subtitle"
+                      style="text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                       Con tecnología avanzada y técnicas especializadas, eliminamos plagas desde la raíz, cuidando tu
                       salud y el ambiente.
                     </p>
@@ -112,15 +140,33 @@
                 </div>
               </div>
               <!-- Slide 3 -->
-              <div class="slide flex items-center justify-center h-full">
-                <div class="caption w-full max-w-2xl mx-auto px-4 py-10 text-center transition-all duration-300">
+              <div class="slide relative flex items-center justify-center h-full w-full transition-all duration-300">
+                <div class="absolute inset-0 w-full h-full flex flex-col sm:block">
+                  <picture>
+                    <!-- Imagen vertical para móvil -->
+                    <source srcset="./img/principal3-vert.png" media="(max-width: 640px)">
+                    <!-- Imagen horizontal para tablet y desktop -->
+                    <img 
+                      src="./img/principal3.png" 
+                      alt="Soluciones duraderas para tu tranquilidad"
+                      class="block w-full h-full object-cover object-center sm:w-full sm:h-full slide-img"
+                      style="width: 100%; height: 100%; min-width: 100%; min-height: 100%;"
+                      loading="lazy" 
+                    />
+                  </picture>
+                  <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div
+                  class="caption absolute z-30 w-full max-w-2xl mx-auto px-4 py-10 text-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300">
                   <div class="px-6 py-8">
                     <h2
-                      class="text-primary-700 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+                      class="text-2xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold mb-4 leading-tight slide-title"
+                      style="color: #00aff0; text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                       Soluciones duraderas para tu tranquilidad
                     </h2>
                     <p
-                      class="text-primary-800 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed drop-shadow-md">
+                      class="text-white text-base sm:text-2xl md:text-2xl lg:text-2xl font-semibold leading-relaxed slide-subtitle"
+                      style="text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                       Diseñamos planes de prevención personalizados para proteger tus espacios durante todo el año.
                     </p>
                   </div>
@@ -130,14 +176,19 @@
             <!-- Botones -->
             <button class="prev z-20"></button>
             <button class="next z-20"></button>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 flex justify-center z-10 mb-4">
-            <div class="flex space-x-4"> <a href="#servicios"
-                class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl text-lg">
-                Ver servicios </a></div>
-          </div>
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 h-20" style="background: linear-gradient(to top, rgba(204, 236, 251, 0.70), transparent);"></div>
+            <!-- Efecto degradado y botón debajo del slider -->
+            <div class="absolute bottom-0 left-0 w-full z-30 pointer-events-none" style="height: 90px;">
+              <div class="w-full h-full" style="background: linear-gradient(to top, rgba(204, 236, 251, 0.70), transparent);"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 flex justify-center z-40 mb-4 pointer-events-auto">
+              <div class="flex space-x-4">
+                <a href="#servicios"
+                  class="bg-primary-600 hover:bg-primary-700 font-medium py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl text-lg"
+                  style="color: #fff !important; text-shadow: 0 0 6px #000, 0 0 12px #000;">
+                  Ver servicios
+                </a>
+              </div>
+            </div>
       </header>
       <section id="quienes-somos" class="py-20" style="background-color: rgba(204, 236, 251, 0.70);">
         <div class="container mx-auto px-6">

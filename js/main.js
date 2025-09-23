@@ -44,15 +44,45 @@ $(function () {
     let currentIndex = 0;
     const totalSlides = $(".slide").length;
 
+    function animateSlideElements(index) {
+        // Remove animation classes and hide all slides' elements
+        $(".slide").each(function () {
+            $(this).find(".slide-img").removeClass("animate-zoom-in");
+            $(this).find(".slide-title").removeClass("animate-title-drop").css("opacity", 0);
+            $(this).find(".slide-subtitle").removeClass("animate-subtitle-rise").css("opacity", 0);
+        });
+
+        // Add animation classes to the current slide's elements
+        const $currentSlide = $(".slide").eq(index);
+
+        // Imagen: mostrar y animar inmediatamente
+        $currentSlide.find(".slide-img").addClass("animate-zoom-in");
+
+        // Título: oculto, mostrar y animar después de 2s
+        setTimeout(() => {
+            $currentSlide.find(".slide-title")
+                .css("opacity", 1)
+                .addClass("animate-title-drop");
+        }, 2000);
+
+        // Subtítulo: oculto, mostrar y animar después de 4s
+        setTimeout(() => {
+            $currentSlide.find(".slide-subtitle")
+                .css("opacity", 1)
+                .addClass("animate-subtitle-rise");
+        }, 4000);
+    }
+
     function showSlide(index) {
         const offset = -index * 100 + "%";
         $(".slides").css("transform", "translateX(" + offset + ")");
+        animateSlideElements(index);
     }
 
+    // Next/Prev button handlers
     $(".next").click(function () {
         currentIndex = (currentIndex + 1) % totalSlides;
         showSlide(currentIndex);
-
     });
 
     $(".prev").click(function () {
@@ -60,10 +90,15 @@ $(function () {
         showSlide(currentIndex);
     });
 
+    // Auto-slide every 15s
     setInterval(function () {
         $(".next").click();
     }, 15000);
 
+    // Initial animation for the first slide
+    showSlide(currentIndex);
+
+    // --- Equipo slider logic (unchanged) ---
     var $slider = $('#equipo-slider .flex');
     var $dots = $('#equipo-dots button');
     var slides = $slider.children().length;
