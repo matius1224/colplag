@@ -159,8 +159,24 @@
               </div>
             </div>
             <!-- Botones -->
-            <button class="prev z-20"></button>
-            <button class="next z-20"></button>
+            <div class="absolute inset-0 flex items-center justify-between pointer-events-none z-30">
+              <button class="prev btn flex items-center justify-center pointer-events-auto shadow-lg bg-white/80 hover:bg-primary-600 hover:text-white text-primary-700 transition-all duration-300"
+                aria-label="Anterior"
+                style="box-shadow: 0 4px 16px rgba(0,0,0,0.18);">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="11" fill="white" stroke="#005B87" stroke-width="2"/>
+                  <path d="M14.5 7l-5 5 5 5" stroke="#005B87" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </button>
+              <button class="next btn flex items-center justify-center pointer-events-auto shadow-lg bg-white/80 hover:bg-primary-600 hover:text-white text-primary-700 transition-all duration-300"
+                aria-label="Siguiente"
+                style="box-shadow: 0 4px 16px rgba(0,0,0,0.18);">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="11" fill="white" stroke="#005B87" stroke-width="2"/>
+                  <path d="M9.5 7l5 5-5 5" stroke="#005B87" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </button>
+            </div>
             <!-- Efecto degradado y botón debajo del slider -->
             <div class="absolute bottom-0 left-0 w-full z-30 pointer-events-none" style="height: 90px;">
               <div class="w-full h-full"
@@ -712,9 +728,18 @@
                 style="color: #fff; text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;">
                 Nuestra Dirección
               </h3>
-              <p class="text-white mb-4">📍 Armenia, Quindio Cra. 23 A # 11A - 07 B. Granada</p>
-              <p class="text-white mb-2">📞 Tel: 315 008 7893 - 317 680 1758</p>
-              <p class="text-white">✉️ colplagsas@gmail.com</p>
+              <div class="flex items-center text-white mb-4">
+                <span class="material-symbols-outlined mr-2 text-2xl align-middle" aria-hidden="true">location_on</span>
+                <span>Armenia, Quindio Cra. 23 A # 11A - 07 B. Granada</span>
+              </div>
+              <div class="flex items-center text-white mb-2">
+                <span class="material-symbols-outlined mr-2 text-2xl align-middle" aria-hidden="true">call</span>
+                <span>Tel: 315 008 7893 - 317 680 1758</span>
+              </div>
+              <div class="flex items-center text-white">
+                <span class="material-symbols-outlined mr-2 text-2xl align-middle" aria-hidden="true">mail</span>
+                <span>colplagsas@gmail.com</span>
+              </div>
             </div>
 
             <!-- Mapa -->

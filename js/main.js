@@ -91,9 +91,18 @@ $(function () {
     });
 
     // Auto-slide every 15s
-    setInterval(function () {
-        $(".next").click();
-    }, 15000);
+    let mainSliderInterval;
+    function startMainSliderInterval() {
+        if (mainSliderInterval) clearInterval(mainSliderInterval);
+        mainSliderInterval = setInterval(function () {
+            $(".next").click();
+        }, 15000);
+    }
+    // Attach to next/prev to reset timer
+    $(".next, .prev").on("click", function () {
+        startMainSliderInterval();
+    });
+    startMainSliderInterval();
 
     // Initial animation for the first slide
     showSlide(currentIndex);
